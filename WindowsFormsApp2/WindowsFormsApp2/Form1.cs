@@ -232,110 +232,105 @@ namespace WindowsFormsApp2
 
         private void EqualsBtn_Click(object sender, EventArgs e)
         {
-            if (Operator.ToString() == '+'.ToString())
+            switch(Operator)
             {
-                if (isFloat == true)
-                {
-                    double Float1 = float.Parse(Num1);
-                    double Float2 = float.Parse(Num2);
-                    double Ans = Float1 + Float2;
-                    Display.Text = Ans.ToString();
-                    Num1 = Ans.ToString();
-                    Num2 = ' '.ToString();
-                    OperatorPressed = false;
-                    Operator = ' '.ToString();
-                    Display.Text = Num1 + Operator + Num2;
-                    isFloat = false;
-                }
-                else
-                {
-                    double Int1 = double.Parse(Num1);
-                    double Int2 = double.Parse(Num2);
-                    double Ans = Int1 + Int2;
-                    Display.Text = Ans.ToString();
-                    Num1 = Ans.ToString();
-                    Num2 = ' '.ToString();
-                    OperatorPressed = false;
-                    Operator = ' '.ToString();
-                    Display.Text = Num1 + Operator + Num2;
-                    isFloat = false;
-                }
-            }
-            else if (Operator.ToString() == '-'.ToString())
-            {
-                if (isFloat == true)
-                {
-                    double Float1 = float.Parse(Num1);
-                    double Float2 = float.Parse(Num2);
-                    double Ans = Float1 - Float2;
-                    Display.Text = Ans.ToString();
-                    Num1 = Ans.ToString();
-                    Num2 = ' '.ToString();
-                    OperatorPressed = false;
-                    Operator = ' '.ToString();
-                    Display.Text = Num1 + Operator + Num2;
-                    isFloat = false;
-                }
-                else
-                {
-                    int Int1 = int.Parse(Num1);
-                    int Int2 = int.Parse(Num2);
-                    int Ans = Int1 - Int2;
-                    Display.Text = Ans.ToString();
-                    Num1 = Ans.ToString();
-                    Num2 = ' '.ToString();
-                    OperatorPressed = false;
-                    Operator = ' '.ToString();
-                    Display.Text = Num1 + Operator + Num2;
-                    isFloat = false;
-                }
-            }
-            else if (Operator.ToString() == 'x'.ToString())
-            {
-                if (isFloat == true)
-                {
-                    double Float1 = float.Parse(Num1);
-                    double Float2 = float.Parse(Num2);
-                    double Ans = Float1 * Float2;
-                    Display.Text = Ans.ToString();
-                    Num1 = Ans.ToString();
-                    Num2 = ' '.ToString();
-                    OperatorPressed = false;
-                    Operator = ' '.ToString();
-                    Display.Text = Num1 + Operator + Num2;
-                    isFloat = false;
-                }
-                else
-                {
-                    double Int1 = double.Parse(Num1);
-                    double Int2 = double.Parse(Num2);
-                    double Ans = Int1 * Int2;
-                    Display.Text = Ans.ToString();
-                    Num1 = Ans.ToString();
-                    Num2 = ' '.ToString();
-                    OperatorPressed = false;
-                    Operator = ' '.ToString();
-                    Display.Text = Num1 + Operator + Num2;
-                    isFloat = false;
-                }
-            }
-            else 
-            {
+                            case "+":
+                                if (isFloat == true)
+                                {
+                                    double Float1 = float.Parse(Num1);
+                                    double Float2 = float.Parse(Num2);
+                                    double Ans = Float1 + Float2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+                                }
+                                else
+                                {
+                                    double Int1 = double.Parse(Num1);
+                                    double Int2 = double.Parse(Num2);
+                                    double Ans = Int1 + Int2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+                                }
+                        case "-":
+                                if (isFloat == true)
+                                {
+                                    double Float1 = float.Parse(Num1);
+                                    double Float2 = float.Parse(Num2);
+                                    double Ans = Float1 - Float2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+                                }
+                                else
+                                {
+                                    int Int1 = int.Parse(Num1);
+                                    int Int2 = int.Parse(Num2);
+                                    int Ans = Int1 - Int2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+                                }
             
-                double Float1 = float.Parse(Num1);
-                double Float2 = float.Parse(Num2);
-                double Ans = Float1 / Float2;
-                Display.Text = Ans.ToString();
-                Num1 = Ans.ToString();
-                Num2 = ' '.ToString();
-                OperatorPressed = false;
-                Operator = ' '.ToString();
-                Display.Text = Num1 + Operator + Num2;
-                isFloat = false;
+                        case "x":
+                                if (isFloat == true)
+                                {
+                                    double Float1 = float.Parse(Num1);
+                                    double Float2 = float.Parse(Num2);
+                                    double Ans = Float1 * Float2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+                                }
+                                else
+                                {
+                                    double Int1 = double.Parse(Num1);
+                                    double Int2 = double.Parse(Num2);
+                                    double Ans = Int1 * Int2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+                                }
+                        case "÷": 
+                                    double Float1 = float.Parse(Num1);
+                                    double Float2 = float.Parse(Num2);
+                                    double Ans = Float1 / Float2;
+                                    Display.Text = Ans.ToString();
+                                    Num1 = Ans.ToString();
+                                    Num2 = ' '.ToString();
+                                    OperatorPressed = false;
+                                    Operator = ' '.ToString();
+                                    Display.Text = Num1 + Operator + Num2;
+                                    isFloat = false;
+
+
 
             }
-
-
         }
     }
 }
